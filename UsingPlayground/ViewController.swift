@@ -7,19 +7,26 @@
 //
 
 import UIKit
+import Cheers
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let cheerView = CheerView()
+        view.addSubview(cheerView)
+        cheerView.frame = view.bounds
+        
+        // Configure
+        cheerView.config.particle = .confetti
+        
+        // Start
+//        cheerView.start()
+        print("load over")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 
 }
 
